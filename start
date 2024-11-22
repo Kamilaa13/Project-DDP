@@ -4,6 +4,7 @@
 #include <string>
 #include <cstring>
 using namespace std;
+
 int main(){
 initscr();
 char nama[50], pass[50], pilihan;
@@ -13,18 +14,16 @@ mvprintw (15, 55, "Username :");
 mvprintw (16, 55, "Password :");
 refresh();
 	
-move(15, 65);
-echo();
-getstr (nama);
+ move(15, 65);
+ echo();
+ getstr (nama);
 	
-move(16, 65);
-echo();
-getstr (pass);
+ move(16, 65);
+ echo();
+ getstr (pass);
 
 refresh();
 clear();
-
-
 
   mvprintw (15, 55, "Loading...");
 	mvprintw (16, 55, "      ");
