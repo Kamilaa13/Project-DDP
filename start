@@ -82,5 +82,4 @@ clear();
 	
 	getch();
 	endwin;
-	return 0;
 }
