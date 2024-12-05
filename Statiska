@@ -1,0 +1,20 @@
+include <iostream>
+include <c.math>
+using namspace std;
+
+int main() {
+int pil;
+ 
+cout << "Tipe Data : 
+1. Data Kelompok
+2. Data Tunggal" << endl;
+
+cin >> pil;
+
+cout << "Masukkan pilihan : 
+1. Median.
+2. Mean
+3. Range"
+
+return 0;
+}
