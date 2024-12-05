@@ -6,7 +6,7 @@ int pil, n;
 
 cout << "Kalkulator Statiska : " << endl;
 cout << "1. Median" << endl;
-cout << "2. Mean" << endl;;
+cout << "2. Mean" << endl;
 cout << "3. Range" << endl;
 
 cout << "Masukkan Pilihan : ";
