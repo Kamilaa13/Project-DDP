@@ -1,20 +1,65 @@
-include <iostream>
-include <c.math>
-using namspace std;
+#include <iostream>
+using namespace std;
 
 int main() {
-int pil;
- 
-cout << "Tipe Data : 
-1. Data Kelompok
-2. Data Tunggal" << endl;
+int pil, n;
 
+cout << "Kalkulator Statiska : " << endl;
+cout << "1. Median" << endl;
+cout << "2. Mean" << endl;;
+cout << "3. Range" << endl;
+
+cout << "Masukkan Pilihan : ";
 cin >> pil;
 
-cout << "Masukkan pilihan : 
-1. Median.
-2. Mean
-3. Range"
+if (pil == 1) {
+	cout << "Masukkan Jumlah Data : ";
+	cin >> n;
+	
+	double jmlh_Data[n];
+	double ttl = 0;
+	
+	for (int i = 0; i < n; i++) {
+		cout << "Data " << i + 1 << " : ";
+		cin >> jmlh_Data[i];
+		ttl += jmlh_Data[i];
+	}
+	
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n - i - 1; i++) {
+			if (jmlh_Data[j] > jmlh_Data[j + 1]) {
+			double temp = jmlh_Data[j];
+			jmlh_Data[j] = jmlh_Data[j + 1];
+			jmlh_Data[j + 1] = temp;
+		}
+	}
+}
+double median;
+if (n & 2 == 0) {
+	median = (jmlh_Data[n / 2 - 1] + jmlh_Data[n / 2]) / 2.0;
+} else {
+	median = jmlh_Data[n / 2];
+}
+cout << "Median : " << median;
+	
+} else if (pil == 2) {
+	cout << "Masukkan Jumlah Data : ";
+	cin >> n;
+	
+	double jmlh_Data[n];
+	double ttl = 0;
+	
+	for (int i = 0; i < n; i++) {
+		cout << "Data " << i + 1 << " : ";
+		cin >> jmlh_Data[i];
+		ttl += jmlh_Data[i];
+	}
+	double mean = ttl / n;
+	cout << "Mean : " << mean; 
+	
+} else if (pil == 3) {
+	
+}
 
 return 0;
 }
